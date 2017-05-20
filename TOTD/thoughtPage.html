@@ -1,24 +1,34 @@
 <html>
  <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <title>Thought of the Day</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: "Montserrat", sans-serif;
+      background-color: slategray;
+      color: lightgreen;
+      overflow-y: scroll;
     }
     .center-v {
       vertical-align: middle;
-      line-height: 96vh;
+      padding-top: 20vh;
+      padding-bottom: 42vh;
+      /*line-height: 96vh;*/
     }
     .center-h {
       text-align: center;
     }
     .bottom {
+      position: absolute;
+      bottom: 15px;
       line-height: 2vh;
       vertical-align: middle;
+      width: 98%;
     }
     #source{
       font-size: 15px;
+      
     }
     #thought {
       font-size: 50px;
@@ -35,11 +45,12 @@
     //console.log(json);
     var now = new Date();
     var day = Math.floor(now/8.64e7);
+    console.log("Today is unix day " + day);
     var totd = json.thoughts[day % json.thoughts.length];
     console.log(totd);
     $("#thought").text(totd.text);
     //console.log(totd.source);
-    $("#source").text((totd.source === undefined) ? "" : totd.source);
+    $("#source").text((totd.source === undefined) ? "" : "Source: " + totd.source);
 
   });
 
