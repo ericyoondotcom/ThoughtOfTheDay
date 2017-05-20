@@ -1,0 +1,49 @@
+<html>
+ <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>Thought of the Day</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .center-v {
+      vertical-align: middle;
+      line-height: 96vh;
+    }
+    .center-h {
+      text-align: center;
+    }
+    .bottom {
+      line-height: 2vh;
+      vertical-align: middle;
+    }
+    #source{
+      font-size: 15px;
+    }
+    #thought {
+      font-size: 50px;
+
+    }
+  </style>
+ </head>
+ <body>
+  <div id="thought" class="center-v center-h">Please wait, I'm thinking...</div>
+  <div id="source" class="bottom center-h">Source goes here</div>
+ </body>
+ <script>
+  $.getJSON("https://raw.githubusercontent.com/yummypasta/ThoughtOfTheDay/master/thoughts.json", function(json){
+    //console.log(json);
+    var now = new Date();
+    var day = Math.floor(now/8.64e7);
+    var totd = json.thoughts[day % json.thoughts.length];
+    console.log(totd);
+    $("#thought").text(totd.text);
+    //console.log(totd.source);
+    $("#source").text((totd.source === undefined) ? "" : totd.source);
+
+  });
+
+
+ </script>
+</html>
+
