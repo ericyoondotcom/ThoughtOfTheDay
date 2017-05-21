@@ -1,7 +1,7 @@
 {
   "name": "Thought Of The Day New Tab",
   "description": "A new tab page that displays a random thought",
-  "version": "1.1",
+  "version": "1.2",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "thoughtPage.html"
