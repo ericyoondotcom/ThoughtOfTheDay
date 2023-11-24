@@ -1,48 +1,23 @@
 <html>
- <head>
-  <script src="jquery-3.2.1.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <title>Thought of the Day</title>
-  <script src="main.js"></script>
-  <style>
-    body {
-      font-family: "Montserrat", sans-serif;
-      background-color: slategray;
-      color: lightgreen;
-      overflow-y: scroll;
-    }
-    .center-v {
-      vertical-align: middle;
-      padding-top: 20vh;
-      padding-bottom: 42vh;
-      /*line-height: 96vh;*/
-    }
-    .center-h {
-      text-align: center;
-    }
-    .bottom {
-      position: absolute;
-      bottom: 15px;
-      line-height: 2vh;
-      vertical-align: middle;
-      width: 98%;
-    }
-    #source{
-      font-size: 15px;
-      
-    }
-    #thought {
-      font-size: 50px;
 
-    }
+<head>
+	<script
+		src="/resources/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+		crossorigin="anonymous">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<title>Thought of the Day</title>
+	<script src="/thoughtPage.js"></script>
+	<link rel="stylesheet" href="/thoughtPage.css">
+</head>
 
-    
-  </style>
- </head>
- <body>
-  <a href="options.html"><img src="https://cdn1.iconfinder.com/data/icons/material-core/20/settings-128.png" alt="Options" width="32px";></a>
-  <div id="thought" class="center-v center-h">Please wait, I'm thinking...</div>
-  <div id="source" class="bottom center-h"></div>
- </body>
+<body>
+	<a href="options.html">
+		<img src="/resources/cog-solid.png"alt="Options" width="32px">
+	</a>
+	<div id="thought">Please wait, I'm thinking...</div>
+	<div id="source"></div>
+</body>
+
 </html>
-
