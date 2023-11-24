@@ -29,7 +29,7 @@ function setRandomColor(storageItems) {
 	const dark = storageItems.Night;
 	const s = dark ? 1 : 0.20;
 	const v = dark ?
-		Math.floor(Math.random() * 20) :
+		Math.floor(Math.random() * 30) :
 		Math.floor(Math.random() * 20) + 80;
 
 	const [r1, g1, b1] = hsv2rgb(h1, s, v / 100);
